@@ -259,6 +259,7 @@ public class userDetails extends JFrame {
             if (valid) {
                 if (source == submit) { //checking the database if the flight details entered are available
                     try {
+                        //where login = your database name, root = your username and "" = your password
                         Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/login",
                                 "root", "");
                         PreparedStatement statement = (PreparedStatement) connection.prepareStatement("SELECT `airline`, `current_city`, `destination`, `flight_class`, `flight_type`, `travel_date`, `number_of_seats` FROM `flight_info` WHERE airline=? and current_city=? and destination=? and flight_class=? and flight_type=? and travel_date=? and number_of_seats=?");
