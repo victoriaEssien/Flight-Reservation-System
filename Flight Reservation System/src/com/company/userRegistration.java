@@ -60,6 +60,7 @@ class RegisterFrame extends JFrame implements ActionListener {
 
         //connecting to the database
         try {
+            //where testlogin = your table name, login = your database name, root = your username and "" = your password
             String query = "INSERT INTO `testlogin`(`username`, `password`) VALUES (?, ?)";
             Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/login",
                     "root", "");
