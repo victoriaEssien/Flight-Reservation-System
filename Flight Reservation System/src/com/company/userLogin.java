@@ -60,6 +60,7 @@ class LoginFrame extends JFrame implements ActionListener {
 
         //Connecting to the database
         try {
+            //where login = your database name, root = your username and "" = your password
             Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/login",
                     "root", "");
             PreparedStatement statement = (PreparedStatement) connection.prepareStatement("Select username, password FROM testLogin WHERE username=? and password=?");
